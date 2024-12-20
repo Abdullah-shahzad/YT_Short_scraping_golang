@@ -21,5 +21,3 @@ The video will be downloaded as output.mp4.
 Notes
 Ensure you have internet access.
 For more yt-dlp options, check the yt-dlp documentation.
-
-Copy and save this content in a file named `README.md`. Let me know if you need further assistance!
