@@ -4,11 +4,14 @@ import (
     "fmt"
     "os"
     "os/exec"
+    "time"
 )
 
 func main() {
-    videoURL := "https://www.youtube.com/shorts/FsV4QtjSi1I"
+    videoURL := "https://www.youtube.com/shorts/LW1-ZfkqEJc"
     outputFile := "output.mp4"
+
+    start := time.Now()
 
     cmd := exec.Command("yt-dlp", "-o", outputFile, videoURL)
 
@@ -23,6 +26,8 @@ func main() {
         return
     }
 
+    elapsed := time.Since(start)
     fmt.Println("Video downloaded successfully as", outputFile)
+    fmt.Printf("Execution time: %s\n", elapsed)
 }
 
